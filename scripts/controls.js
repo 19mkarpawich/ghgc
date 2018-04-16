@@ -90,7 +90,7 @@ resFolder.open();
 trainFolder.open();
 
 function disable(name) {
-    const control = CONTROLS[name];
+    var control = CONTROLS[name];
     if (!control.disabled) {
         control.disabled = true;
         control.controller.domElement.parentNode.parentNode.classList.add('disabled');
@@ -99,7 +99,7 @@ function disable(name) {
 
 function enable(name) {
     console.log(name);
-    const control = CONTROLS[name];
+    var control = CONTROLS[name];
     if (control.disabled) {
         control.disabled = false;
         control.controller.domElement.parentNode.parentNode.classList.remove('disabled');
@@ -112,7 +112,7 @@ function isDisabled(name) {
 
 canvas.addEventListener('click',function(event) {
     if (GAME_STATE == GS_GAME) {
-        const x = Math.floor(event.offsetX / 600 * 800), y = Math.floor(event.offsetY / 450 * 600);
+        var x = Math.floor(event.offsetX / 600 * 800), y = Math.floor(event.offsetY / 450 * 600);
         if (!(x < 670 || x > 780 || y < 540 || y > 580)) {
             GAME.call();
         }

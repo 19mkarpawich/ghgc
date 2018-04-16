@@ -12,8 +12,8 @@ class Counter {
 
     day(currMoney) {
         this.counter += 1;
-        const newMoney = currMoney + this.moneyChange;
-        const name = this.name;
+        var newMoney = currMoney + this.moneyChange;
+        var name = this.name;
         if (this.counter >= this.maxDays && newMoney > 0) {
             if (!this.special && this.value < 100) enable(name);
             if (this.called) {
@@ -69,8 +69,8 @@ class Game {
             ];
         }
 
-        for (let i = 0; i < this.counters.length; i++) {
-            const counter = this.counters[i];
+        for (var i = 0; i < this.counters.length; i++) {
+            var counter = this.counters[i];
             this['call_' + counter.name] = function() {
                 counter.call();
             };
@@ -82,7 +82,7 @@ class Game {
     day() {
         if ((this.daysApoc - this.days > 0 && this.daysMission - this.days > 0 && !this.called)) {
                 this.call_income();
-                for (let i = 0; i < this.counters.length; i++) {
+                for (var i = 0; i < this.counters.length; i++) {
                     this.money = this.counters[i].day(this.money);
                 }
                 this.money = this.campaigns.day(this.money);
@@ -108,11 +108,11 @@ class Game {
 
     end() {
         //take the current state of the game and decide whether the user won
-        let victory = true;
-        const counters = this.counters;
-        for (let i = 1; i < counters.length; i++) {
-            const counter = counters[i];
-            const diff = (100 - counter.value) / 2;
+        var victory = true;
+        var counters = this.counters;
+        for (var i = 1; i < counters.length; i++) {
+            var counter = counters[i];
+            var diff = (100 - counter.value) / 2;
             if (genRandom(1,101) <= diff) {
                 victory = false;
                 break;
@@ -148,10 +148,10 @@ class CampaignManager {
     }
 
     day(currMoney) {
-        const campaigns = this.campaigns;
-        let newMoney = currMoney;
-        for (let i = campaigns.length - 1; i >= 0; i--) {
-            const campaign = campaigns[i];
+        var campaigns = this.campaigns;
+        var newMoney = currMoney;
+        for (var i = campaigns.length - 1; i >= 0; i--) {
+            var campaign = campaigns[i];
             if (campaign.days > 0) {
                 campaign.day();
                 newMoney += 350 - Math.abs(2 - i) * 35;

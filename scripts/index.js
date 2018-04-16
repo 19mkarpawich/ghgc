@@ -18,11 +18,11 @@ VIDEOS.add('success', succVideo, function() {
 
 VIDEOS.play('overpop');
 
-let millis = 0;
+var millis = 0;
 
 function update() {
     if (GAME_STATE == GS_GAME) {
-        const time = new Date().getTime();
+        var time = new Date().getTime();
         if (time - millis >= 600) {
             GAME.day();
             console.log(GAME);
@@ -71,20 +71,20 @@ function draw() {
             context.drawImage(startImage, 0, 0, 800, 600, 0, 0, 800, 600);
             break;
         case GS_GAME:
-            const counters = GAME.counters;
+            var counters = GAME.counters;
 
             context.drawImage(idleImage,0,0,1920,1080,-100,0,800,600);
             context.font = '22px Roboto';
             context.lineWidth = 3;
 
             if (!GAME.robotMode) {
-                for (let i = 1; i < counters.length; i++) {
-                    const counter = counters[i];
-                    const value = Math.floor(counter.value / 100 * ((i > 4) ? 315 : 150));
-                    const curr = counter.counter;
-                    const cooldown = Math.floor(((curr > counter.maxDays) ? counter.maxDays : curr) / counter.maxDays * ((i > 4) ? 315 : 150));
-                    const x = ((i > 4 || i % 2 != 0) ? 425 : 590);
-                    const y = ((i > 4) ? 270 + (i - 5) * 90 : (i > 2) ? 160 : 70);
+                for (var i = 1; i < counters.length; i++) {
+                    var counter = counters[i];
+                    var value = Math.floor(counter.value / 100 * ((i > 4) ? 315 : 150));
+                    var curr = counter.counter;
+                    var cooldown = Math.floor(((curr > counter.maxDays) ? counter.maxDays : curr) / counter.maxDays * ((i > 4) ? 315 : 150));
+                    var x = ((i > 4 || i % 2 != 0) ? 425 : 590);
+                    var y = ((i > 4) ? 270 + (i - 5) * 90 : (i > 2) ? 160 : 70);
                     context.fillStyle = 'white';
                     context.fillText(counter.name, x, y);
                     context.fillStyle = 'rgb(0,100,0)';
@@ -97,10 +97,10 @@ function draw() {
                     context.strokeRect(x, y + 50, (i > 4) ? 315 : 150, 15);
                 }
             }else{
-                const fuelCounter = counters[1];
-                const fuelValue = Math.floor(fuelCounter.value / 100 * 315);
-                const fuelCurr = fuelCounter.counter;
-                const fuelCooldown = Math.floor(((fuelCurr > fuelCounter.maxDays) ? fuelCounter.maxDays : fuelCurr) / fuelCounter.maxDays * 315);
+                var fuelCounter = counters[1];
+                var fuelValue = Math.floor(fuelCounter.value / 100 * 315);
+                var fuelCurr = fuelCounter.counter;
+                var fuelCooldown = Math.floor(((fuelCurr > fuelCounter.maxDays) ? fuelCounter.maxDays : fuelCurr) / fuelCounter.maxDays * 315);
                 context.fillStyle = 'white';
                 context.fillText(fuelCounter.name, 425, 70);
                 context.fillStyle = 'rgb(0,100,0)';
@@ -112,10 +112,10 @@ function draw() {
                 context.fillRect(425, 120, fuelCooldown, 15);
                 context.strokeRect(425, 120, 315, 15);
 
-                const eduCounter = counters[2];
-                const eduValue = Math.floor(eduCounter.value / 100 * 315);
-                const eduCurr = eduCounter.counter;
-                const eduCooldown = Math.floor(((eduCurr > eduCounter.maxDays) ? eduCounter.maxDays : eduCurr) / eduCounter.maxDays * 315);
+                var eduCounter = counters[2];
+                var eduValue = Math.floor(eduCounter.value / 100 * 315);
+                var eduCurr = eduCounter.counter;
+                var eduCooldown = Math.floor(((eduCurr > eduCounter.maxDays) ? eduCounter.maxDays : eduCurr) / eduCounter.maxDays * 315);
                 context.fillStyle = 'white';
                 context.fillText(eduCounter.name, 425, 160);
                 context.fillStyle = 'rgb(0,100,0)';
@@ -128,7 +128,7 @@ function draw() {
                 context.strokeRect(425, 210, 315, 15);
             }
 
-            const daysLeft = Math.floor(GAME.days / GAME.daysMission * 590);
+            var daysLeft = Math.floor(GAME.days / GAME.daysMission * 590);
             context.fillStyle = 'rgb(100,0,0)';
             context.fillRect(58,550,590,25);
             context.fillStyle = 'rgb(255,0,0)';

@@ -3,34 +3,34 @@
  */
 
  //canvas
-const canvas = document.getElementById('canvas');
-const context = canvas.getContext('2d');
+var canvas = document.getElementById('canvas');
+var context = canvas.getContext('2d');
 //prevents canvas from 'smoothing' (blurring) image edges
 context.imageSmoothingEnabled = false;
 context.textBaseline = 'top';
 
 //dat.GUI
 
-const gui = new dat.GUI({
+var gui = new dat.GUI({
     autoPlace: false,
 });
 document.getElementById('controls').appendChild(gui.domElement);
 
-const pubFolder = gui.addFolder('publicity');
-const resFolder = gui.addFolder('resources');
-const trainFolder = gui.addFolder('training');
-//const workFolder = gui.addFolder('employees');
+var pubFolder = gui.addFolder('publicity');
+var resFolder = gui.addFolder('resources');
+var trainFolder = gui.addFolder('training');
+//var workFolder = gui.addFolder('employees');
 
 //videos
-const idleImage = document.getElementById('idle');
-const backImage = document.getElementById('back');
-const dirImage = document.getElementById('dir');
-const startImage = document.getElementById('start');
-const altImage = document.getElementById('alt');
-const succVideo = document.getElementById('success');
-const boomVideo = document.getElementById('boom');
-const coastVideo = document.getElementById('coast');
-const overpopVideo = document.getElementById('overpop');
+var idleImage = document.getElementById('idle');
+var backImage = document.getElementById('back');
+var dirImage = document.getElementById('dir');
+var startImage = document.getElementById('start');
+var altImage = document.getElementById('alt');
+var succVideo = document.getElementById('success');
+var boomVideo = document.getElementById('boom');
+var coastVideo = document.getElementById('coast');
+var overpopVideo = document.getElementById('overpop');
 
 //random
 function genRandom(minInc, maxExc) {
