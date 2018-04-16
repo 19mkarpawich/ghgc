@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:800" rel="stylesheet">
+    <link rel='stylesheet' href='index.css'>
+</head>
+
+<body>
+    <div class='table'>
+        <div class='table-cell'>
+            <canvas id='canvas' width='800' height='600'></canvas>
+        </div>
+    </div>
+    <a href='https://github.com/opensourceskier/ghgc' class='link'>source</a>
+    <div id='controls'></div>
+    <img id='idle' src='res/idle.jpg'/>
+    <img id='back' src='res/back.png' />
+    <img id='dir' src='res/dir.png' />
+    <img id='start' src='res/start.png' />
+    <img id='alt' src='res/alt.png' />
+    <video id='boom' muted>
+        <source src='./res/boom.mp4' type='video/mp4'>
+    </video>
+    <video id='success' muted>
+        <source src='./res/success.mp4' type='video/mp4'>
+    </video>
+    <video id='overpop' muted>
+        <source src='./res/overpop.mp4' type='video/mp4'>
+    </video>
+    <video id='coast' muted>
+        <source src='./res/coast.mp4' type='video/mp4'>
+    </video>
+    <script type='text/javascript' src='./scripts/dat.gui.min.js'></script>
+    <script type='text/javascript' src='./scripts/declare.js'></script>
+    <script type='text/javascript' src='./scripts/video.js'></script>
+    <script type='text/javascript' src='./scripts/controls.js'></script>
+    <script type='text/javascript' src='./scripts/game.js'></script>
+    <script type='text/javascript' src='./scripts/index.js'></script>
+</body>
