@@ -26,3 +26,9 @@ York, 2014.
 - [NASA STS-116 Launch](https://www.nasa.gov/mission_pages/shuttle/shuttlemissions/sts116/multimedia/index.html)
 
 - [NASA Antares explosion](https://en.wikipedia.org/wiki/File:Antares_Fails_to_Reach_Orbit_with_Cygnus_CRS-3_after_Rocket_Explodes.webm)
+
+
+# License
+
+Copyright (c) Max Karpawich 2018.
+**MIT License**
