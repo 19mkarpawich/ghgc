@@ -86,7 +86,6 @@ VIDEOS = {
             context.drawImage(video, x1, y1, w1, h1, x2, y2, w2, h2);
         } else {
             if (callback) callback();
-            this.remove(key);
         }
     }
 }
@@ -259,7 +258,6 @@ Counter.prototype.day = function (currMoney) {
     if (this.counter >= this.maxDays && newMoney > 0) {
         if (!this.special && this.value < 100) enable(name);
         if (this.called) {
-            console.log("OH HELLO!");
             this.counter = 0;
             if (this.value < 100) {
                 this.value += this.valueChange;
@@ -309,12 +307,14 @@ var Game = function (robotMode) {
 
     for (var i = 0; i < this.counters.length; i++) {
         var counter = this.counters[i];
-        this['call_' + counter.name] = function () {
-            counter.call();
-        };
+        this['call_' + counter.name] = buildCall(counter);
     }
 
     this.campaigns = new CampaignManager();
+}
+
+function buildCall(counter) {
+    return function() {counter.call()};
 }
 
 Game.prototype.day = function () {
