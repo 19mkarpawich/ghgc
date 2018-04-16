@@ -1,21 +1,21 @@
 # Works Cited
 
-“World Urbanization Prospects, The 2014 Revision: Highlights.” United Nations New 
-York, 2014.
-
-“When Rising Seas Hit Home: Hard Choices Ahead for Hundreds of US Coastal 
-Communities.” Union of Concerned Scientists. Union of Concerned Scientists, 
-2017. Accessed 31 Mar. 2018.
-
 “Falcon Heavy”. SpaceX. SpaceX, 2017. Accessed 3 April 2018.
-
-Núñez, Jose. “ Challenges of Human Exploration of Mars.” NASA Technical Reports 
-Server, NASA Kennedy Space Center, 30 Oct. 2017
 
 Nelson, Craig. “Don't Eat Toads.” Rocket Men: the Epic Story of the First Men on the 
 Moon, Penguin Group, 2009, pp. 57–70, Milne Library.
 
 Northrup, Charlie. Telephone Interview. January 6, 2017.
+
+Núñez, Jose. “ Challenges of Human Exploration of Mars.” NASA Technical Reports 
+Server, NASA Kennedy Space Center, 30 Oct. 2017
+
+“When Rising Seas Hit Home: Hard Choices Ahead for Hundreds of US Coastal 
+Communities.” Union of Concerned Scientists. Union of Concerned Scientists, 
+2017. Accessed 31 Mar. 2018.
+
+“World Urbanization Prospects, The 2014 Revision: Highlights.” United Nations New 
+York, 2014.
 
 # Media Used
 
