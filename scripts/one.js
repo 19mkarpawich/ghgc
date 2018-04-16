@@ -350,7 +350,7 @@ Game.prototype.end = function () {
     var counters = this.counters;
     for (var i = 1; i < counters.length; i++) {
         var counter = counters[i];
-        var diff = (100 - counter.value) / 2;
+        var diff = (100 - counter.value) * 2;
         if (genRandom(1, 101) <= diff) {
             victory = false;
             break;
