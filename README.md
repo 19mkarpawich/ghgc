@@ -11,8 +11,7 @@ Moon, Penguin Group, 2009, pp. 57–70, Milne Library.
 Server, NASA Kennedy Space Center, 30 Oct. 2017
 
 - “When Rising Seas Hit Home: Hard Choices Ahead for Hundreds of US Coastal 
-Communities.” Union of Concerned Scientists. Union of Concerned Scientists, 
-2017.Accessed 31 Mar. 2018.
+Communities.” Union of Concerned Scientists. Union of Concerned Scientists, 2017.Accessed 31 Mar. 2018.
 
 - “World Urbanization Prospects, The 2014 Revision: Highlights.” United Nations New 
 York, 2014.
