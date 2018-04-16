@@ -14,8 +14,7 @@ Counter.prototype.day = function(currMoney) {
     var newMoney = currMoney + this.moneyChange;
     var name = this.name;
     if (this.counter >= this.maxDays && newMoney > 0) {
-        if (name == 'income')
-            if (!this.special && this.value < 100) enable(name);
+        if (!this.special && this.value < 100) enable(name);
         if (this.called) {
             this.counter = 0;
             if (this.value < 100) {
